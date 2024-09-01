@@ -1,0 +1,17 @@
+// Find the Ascii value of given Character
+import java.util.*;
+import java.io.*;
+class Test{
+    
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        char ch = sc.next().charAt(0);
+        int asc = ch;
+        
+        System.out.println(asc);
+    }
+}
+
+// Time Complexity----O(1)
+// Space Complexity---O(1)
