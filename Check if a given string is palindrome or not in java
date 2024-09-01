@@ -1,0 +1,38 @@
+// Check if the string is Palindrome or not
+import java.util.*;
+import java.io.*;
+class Test{
+    static boolean isPalindrome(String str)
+    {
+        int left=0, right=str.length()-1;
+        while(left<right)
+        {
+            char l = str.charAt(left), r = str.charAt(right);
+            if(!Character.isLetterOrDigit(l))
+            left++;
+            else if(!Character.isLetterOrDigit(r))
+            right--;
+            else if(Character.toLowerCase(l)!=Character.toLowerCase(r))
+            return false;
+            else
+            {
+                left++;
+                right--;
+            }
+        }
+        return true;
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String str = new String(sc.nextLine());
+        boolean flag = isPalindrome(str);
+        if(flag==true)
+        System.out.println("Palindrome");
+        else
+        System.out.println("Not Palindrome");
+    }
+}
+
+// Time Complexity----O(n)
+// Space Complexity---O(1)
